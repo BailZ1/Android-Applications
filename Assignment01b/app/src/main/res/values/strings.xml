@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DemoAPP</string>
+    <string name="enter_temperature">Enter Temperature</string>
+    <string name="temperature">Temperature:</string>
+    <string name="conversion">Conversion:</string>
+    <string name="c_to_f">C to F</string>
+    <string name="f_to_c">F to C</string>
+    <string name="reset">Reset</string>
+    <string name="output">N/A</string>
+    <string name="select_conversion">Select Conversion:</string>
+    <string name="calculate">Calculate</string>
+    <string name="title">Temperature Conversion</string>
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Assignment 2</string>
+    <string name="hexColor">     </string>
+    <string name="rgbColor">"     "</string>
+    <string name="redValue">"   "</string>
+    <string name="greenValue">"   "</string>
+    <string name="blueValue">"   "</string>
+</resources>
