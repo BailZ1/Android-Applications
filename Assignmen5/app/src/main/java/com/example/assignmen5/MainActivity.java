@@ -33,8 +33,12 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public void onNextButtonClicked(User user) {
-        ProfileFragment profileFragment = ProfileFragment.newInstance(user);
-        loadFragment(profileFragment, true);
+
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container, new ProfileFragment().newInstance(user), "1")
+                .addToBackStack(null)
+                .commit();
+
     }
 
     @Override
@@ -46,17 +50,19 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public void onSubmitButtonClicked(User user) {
         FragmentManager fragmentManager = getSupportFragmentManager();
-        ProfileFragment profileFragment = (ProfileFragment) fragmentManager.findFragmentByTag(ProfileFragment.class.getSimpleName());
+        ProfileFragment profileFragment = (ProfileFragment) fragmentManager.findFragmentByTag("1");
         if (profileFragment != null) {
             profileFragment.updateUser(user);
             fragmentManager.popBackStack();
         }
     }
 
+
     @Override
     public void onCancelButtonClicked() {
         getSupportFragmentManager().popBackStack();
     }
+
 
     private void loadFragment(Fragment fragment, boolean addToBackStack) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
