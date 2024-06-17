@@ -28,7 +28,6 @@ public class CreateUserFragment extends Fragment {
 
     public void updateCountry(String c) {
         this.country = c;
-
     }
 
     public void updateDateOfBirth(String dob) {

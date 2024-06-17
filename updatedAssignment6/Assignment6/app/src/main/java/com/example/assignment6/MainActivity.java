@@ -54,7 +54,6 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Main
             createUserFragment.updateCountry(country);
             fragmentManager.popBackStack();
         }
-
     }
 
     @Override
