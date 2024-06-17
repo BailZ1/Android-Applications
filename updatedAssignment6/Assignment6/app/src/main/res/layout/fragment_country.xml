@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/countryFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CountryFragment">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="24dp"
+        android:text="Country"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Select Your Country:"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupCountry"
+        android:layout_width="188dp"
+        android:layout_height="575dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+        <RadioButton
+            android:id="@+id/radio_afghanistan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Afghanistan" />
+
+        <RadioButton
+            android:id="@+id/radio_albania"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Albania" />
+
+        <RadioButton
+            android:id="@+id/radio_algeria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Algeria" />
+
+        <RadioButton
+            android:id="@+id/radio_andorra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Andorra" />
+
+        <RadioButton
+            android:id="@+id/radio_angola"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Angola" />
+
+        <RadioButton
+            android:id="@+id/radio_antigua_barbuda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Antigua and Barbuda" />
+
+        <RadioButton
+            android:id="@+id/radio_argentina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Argentina" />
+
+        <RadioButton
+            android:id="@+id/radio_armenia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Armenia" />
+
+        <RadioButton
+            android:id="@+id/radio_australia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Australia" />
+
+        <RadioButton
+            android:id="@+id/radio_austria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Austria" />
+
+        <RadioButton
+            android:id="@+id/radio_azerbaijan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Azerbaijan" />
+
+        <RadioButton
+            android:id="@+id/radio_bahamas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bahamas" />
+
+        <RadioButton
+            android:id="@+id/radio_bahrain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bahrain" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Cancel"
+        app:layout_constraintEnd_toStartOf="@+id/submit_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupCountry" />
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="199dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cancel_button"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupCountry" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
