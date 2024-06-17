@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textViewBillNameTemplate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewBillAmountTemplate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/textViewBillNameTemplate"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBillNameTemplate" />
+
+    <TextView
+        android:id="@+id/textViewDiscountPercentTemplate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/textViewBillAmountTemplate"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBillAmountTemplate" />
+
+    <TextView
+        android:id="@+id/textViewTotalBillTemplate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/textViewDiscountPercentTemplate"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDiscountPercentTemplate" />
+
+    <TextView
+        android:id="@+id/textViewDateTemplate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/textViewTotalBillTemplate"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTotalBillTemplate" />
+
+    <TextView
+        android:id="@+id/textViewCategoryTemplate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/textViewDateTemplate"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDateTemplate" />
+
+    <ImageView
+        android:id="@+id/imageViewDeleteTemplate"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDateTemplate"
+        app:srcCompat="@drawable/ic_delete" />
+
+    <ImageView
+        android:id="@+id/imageViewEditTemplate"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewDeleteTemplate"
+        app:layout_constraintTop_toTopOf="@+id/imageViewDeleteTemplate"
+        app:srcCompat="@drawable/ic_edit" />
+</androidx.constraintlayout.widget.ConstraintLayout>
