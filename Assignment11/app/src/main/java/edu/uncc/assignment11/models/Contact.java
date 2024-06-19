@@ -1,0 +1,93 @@
+package edu.uncc.assignment11.models;
+
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+import java.io.Serializable;
+import java.lang.reflect.Constructor;
+
+@Entity(tableName = "contacts")
+public class Contact implements Serializable {
+
+    @PrimaryKey(autoGenerate = true)
+            public long id;
+
+    @ColumnInfo
+    String name;
+
+    @ColumnInfo
+    String phone;
+
+    @ColumnInfo
+    String email;
+
+    @ColumnInfo
+    String phoneType;
+
+    @ColumnInfo
+    String group;
+
+    public Contact(String name, String phone, String email, String phoneType, String group) {
+        this.name = name;
+        this.phone = phone;
+        this.email = email;
+        this.phoneType = phoneType;
+        this.group = group;
+    }
+
+    public Contact() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhoneType() {
+        return phoneType;
+    }
+
+    public void setPhoneType(String phoneType) {
+        this.phoneType = phoneType;
+    }
+
+    public String getGroup() {
+        return group;
+    }
+
+    public void setGroup(String group) {
+        this.group = group;
+    }
+
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneType='" + phoneType + '\'' +
+                ", group='" + group + '\'' +
+                '}';
+    }
+}
