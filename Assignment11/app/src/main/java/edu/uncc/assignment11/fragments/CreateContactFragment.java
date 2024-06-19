@@ -102,7 +102,7 @@ public class CreateContactFragment extends Fragment {
                 //create new contact and send it to the main acitivty through the listener
                 // void doneCreateContact(Contact contact);
 
-                mListener.doneCreateContact(new Contact(name, email, phone, selectedPhoneType, selectedGroup));
+                mListener.doneCreateContact(new Contact(name, phone, email, selectedPhoneType, selectedGroup));
 
             }
         });

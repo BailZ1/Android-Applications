@@ -23,7 +23,7 @@ import edu.uncc.assignment11.models.Contact;
 
 public class MainActivity extends AppCompatActivity implements ContactsFragment.ContactsListener,
         CreateContactFragment.CreateContactListener, SelectPhoneTypeFragment.SelectPhoneTypeListener,
-        SelectGroupFragment.SelectGroupListener, ContactSummaryFragment.ContactSummaryListener {
+        SelectGroupFragment.SelectGroupListener, ContactSummaryFragment.ContactSummaryListener, UpdateContactFragment.UpdateContactListener {
 
     AppDatabase db;
 
@@ -103,6 +103,17 @@ public class MainActivity extends AppCompatActivity implements ContactsFragment.
                 .replace(R.id.main, new SelectGroupFragment())
                 .addToBackStack(null)
                 .commit();
+    }
+
+    @Override
+    public void doneUpdateContact(Contact contact) {
+        db.contactDao().update(contact);
+        getSupportFragmentManager().popBackStack();
+    }
+
+    @Override
+    public void cancelUpdateContact() {
+        getSupportFragmentManager().popBackStack();
     }
 
     @Override

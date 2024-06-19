@@ -71,6 +71,10 @@ public class UpdateContactFragment extends Fragment {
             binding.textViewGroup.setText("N/A");
         }
 
+        binding.editTextName.setText(mContact.getName());
+        binding.editTextEmail.setText(mContact.getEmail());
+        binding.editTextPhone.setText(mContact.getPhone());
+
         binding.buttonSelectGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -116,6 +120,14 @@ public class UpdateContactFragment extends Fragment {
 
                 //update current contact and send it to the main acitivty through the listener
                 // void doneUpdateContact(Contact contact);
+
+                mContact.setName(name);
+                mContact.setEmail(email);
+                mContact.setPhone(phone);
+                mContact.setPhoneType(binding.textViewPhoneType.getText().toString());
+                mContact.setGroup(binding.textViewGroup.getText().toString());
+
+                mListener.doneUpdateContact(mContact);
 
             }
         });
